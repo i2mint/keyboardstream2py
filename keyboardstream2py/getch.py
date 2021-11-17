@@ -100,12 +100,13 @@ class _GetchWindows:
 getch = _Getch()
 
 
-if __name__ == '__main__':
+def smoke_test_getch():
     import sys
 
     def getch_loop(is_blocking=True):
         print(
-            f'{"Blocking" if is_blocking is True else "Non-blocking"} getch! Press any key! Esc to quit!'
+            f'{"Blocking" if is_blocking is True else "Non-blocking"} '
+            'getch! Press any key! Esc to quit!'
         )
         i = 0
         getch_func = getch.blocking if is_blocking is True else getch.non_blocking
@@ -119,6 +120,7 @@ if __name__ == '__main__':
             i += 1
 
     getch_file, *args = sys.argv
+
     print(
         'Getch! Echo key press usage:\n'
         f'Blocking mode: python {getch_file}\n'
