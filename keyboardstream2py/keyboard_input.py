@@ -1,3 +1,4 @@
+"""keyboard strokes input reader"""
 from collections import deque
 from contextlib import suppress
 import operator

@@ -1,3 +1,5 @@
+"""The util to capture keyboard strokes"""
+
 __all__ = ['getch']
 
 
