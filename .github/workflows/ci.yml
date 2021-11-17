@@ -37,7 +37,7 @@ jobs:
         run: pylint ./$PROJECT_NAME --ignore=tests,examples,scrap --disable=all --enable=C0114
 
       - name: Test
-        run: pytest --doctest-modules --ignore=scrap --ignore $PROJECT_NAME/getch.py -v $PROJECT_NAME
+        run: pytest --doctest-modules --ignore=scrap --ignore=$PROJECT_NAME/getch.py -v $PROJECT_NAME
 		
   publish:
     name: Publish
