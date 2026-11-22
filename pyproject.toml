@@ -138,6 +138,7 @@ coverage_report_format = [
 exclude_paths = [
     "examples",
     "scrap",
+    "keyboardstream2py/getch.py",
 ]
 test_on_windows = true
 
