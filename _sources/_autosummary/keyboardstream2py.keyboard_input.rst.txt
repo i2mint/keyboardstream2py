@@ -1,0 +1,12 @@
+keyboardstream2py.keyboard\_input
+=================================
+
+.. automodule:: keyboardstream2py.keyboard_input
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      KeyboardInputSourceReader
+   

@@ -1,0 +1,14 @@
+﻿keyboardstream2py
+=================
+
+.. automodule:: keyboardstream2py
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   getch
+   keyboard_input

@@ -1,0 +1,13 @@
+# keyboardstream2py
+
+> stream2py interface for keyboard inputs
+
+
+## Pages in this subsection
+
+- [keyboardstream2py](keyboardstream2py.html.md): Keyboard input stream2py interface
+- [keyboardstream2py.keyboard_input](keyboardstream2py.keyboard_input.html.md): keyboard strokes input reader
+
+## Optional
+
+- [Top-level llms.txt](../llms.txt): Complete documentation index.
