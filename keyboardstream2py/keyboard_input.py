@@ -1,4 +1,5 @@
 """keyboard strokes input reader"""
+
 from collections import deque
 from contextlib import suppress
 import operator
@@ -47,7 +48,7 @@ class KeyboardInputSourceReader(SourceReader, threading.Thread):
 
     @property
     def info(self) -> dict:
-        return {'bt': self.bt}
+        return {"bt": self.bt}
 
     def key(self, data: Any) -> ComparableType:
         """
@@ -73,14 +74,14 @@ class KeyboardInputSourceReader(SourceReader, threading.Thread):
             raise
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     with KeyboardInputSourceReader() as source:
-        print('getch! Press any key! Esc to quit!')
+        print("getch! Press any key! Esc to quit!")
         while True:
             data = source.read()
             if data is not None:
                 index, timestamp, char = data
-                print(f'{timestamp}: {char}', end='\n\r')
+                print(f"{timestamp}: {char}", end="\n\r")
 
-                if char == '\x1b':  # ESC key
+                if char == "\x1b":  # ESC key
                     break

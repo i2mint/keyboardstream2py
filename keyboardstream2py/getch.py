@@ -1,6 +1,6 @@
 """The util to capture keyboard strokes"""
 
-__all__ = ['getch']
+__all__ = ["getch"]
 
 
 class _Getch:
@@ -107,26 +107,26 @@ def smoke_test_getch():
 
     def getch_loop(is_blocking=True):
         print(
-            f'{"Blocking" if is_blocking is True else "Non-blocking"} '
-            'getch! Press any key! Esc to quit!'
+            f"{'Blocking' if is_blocking is True else 'Non-blocking'} "
+            "getch! Press any key! Esc to quit!"
         )
         i = 0
         getch_func = getch.blocking if is_blocking is True else getch.non_blocking
         while True:
             char = getch_func()
             if char or i % 15000 == 0:
-                print(f'{i}: {char}')
+                print(f"{i}: {char}")
 
-            if char == '\x1b':  # ESC key
+            if char == "\x1b":  # ESC key
                 break
             i += 1
 
     getch_file, *args = sys.argv
 
     print(
-        'Getch! Echo key press usage:\n'
-        f'Blocking mode: python {getch_file}\n'
-        f'Non-blocking mode: python {getch_file} False\n'
+        "Getch! Echo key press usage:\n"
+        f"Blocking mode: python {getch_file}\n"
+        f"Non-blocking mode: python {getch_file} False\n"
     )
 
-    getch_loop(is_blocking=False if len(args) and args[0] == 'False' else True)
+    getch_loop(is_blocking=False if len(args) and args[0] == "False" else True)
